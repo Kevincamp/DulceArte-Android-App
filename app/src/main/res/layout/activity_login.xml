@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.migadepan.pharmacyapp.Controller.LoginActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_dulceartewhite_1_5x"
+            android:scaleType="fitCenter"
+            android:layout_margin="60dp"
+            android:layout_weight="0.4"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:text="Correo electronico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:id="@+id/et_user_login"
+                android:layout_above="@+id/password_login"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:text="Contraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/correo_login"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_below="@+id/textView2"
+                android:layout_alignStart="@+id/et_user_login"
+                android:layout_marginTop="11dp"
+                android:id="@+id/et_pass_login"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:id="@+id/ly_boton_login"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/login"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorSecond"
+                    android:background="@drawable/round_white_stroke"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/txt_remember_pass"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
